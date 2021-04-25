@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  background-color: hsl(257, 40%, 49%);
+  overflow: hidden;
+
+  background-clip: padding-box;
+}
+
+.cover {
+  background-repeat: no-repeat;
+  background-image: url(./images/bg-desktop.svg);
+
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  flex-basis: 55%;
+  height: 100%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+  margin-left: 5%;
+  position: absolute;
+  top: -2%;
+}
+.mock {
+  width: 85%;
+  height: 60%;
+  margin-left: 5%;
+  margin-bottom: 7%;
+
+  position: absolute;
+  top: 25%;
+}
+
+.right {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  font-family: "open sans";
+  padding: 1%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.right_inner {
+  position: absolute;
+  top: 25%;
+}
+
+.icons {
+  display: flex;
+  position: absolute;
+  bottom: 3%;
+  font-size: 14px;
+  right: 3%;
+}
+
+.icon_border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: oldlace 2px solid;
+}
+
+.icons > div {
+  margin: 5px;
+}
+
+h1 {
+  font-size: 230%;
+  font-weight: bold;
+  letter-spacing: 20%;
+  padding-right: 25%;
+  margin-bottom: 28px;
+}
+
+p {
+  line-height: 130%;
+  color: rgb(221, 213, 213);
+  font-size: 18px;
+  margin-bottom: 25px;
+  padding-right: 14%;
+}
+
+button {
+  border-radius: 30px;
+  height: 60px;
+  width: 33%;
+  font-size: 120%;
+  color: rgb(139, 90, 139);
+  border: none;
+  box-shadow: rgb(69, 42, 82) 0px 0px 10px;
+}
+
+button:active {
+  background-color: rgb(226, 132, 223);
+  color: blanchedalmond;
+}
+
+.icons > div:active {
+  color: rgb(226, 132, 223);
+}
+
+#icon1:active,
+#icon2:active,
+#icon3:active {
+  border-color: rgb(226, 132, 223);
+}
+
+@media only screen and (max-width: 600px) {
+  .cover {
+    background-image: url(./images/bg-mobile.svg);
+    background-size: contain;
+  }
+  .main {
+    flex-direction: column;
+  }
+
+  .left {
+    flex-basis: 350px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    top: 20px;
+    height: 40px;
+    width: 500px;
+    right: 120px;
+  }
+
+  .mock {
+    height: 260px;
+    width: 78%;
+    margin-right: 20px;
+  }
+
+  .right {
+    margin: 0%;
+    padding: 0px;
+    display: flex;
+    margin-left: 0px;
+    padding: 70px;
+    top: -70px;
+
+    flex-basis: 350px;
+  }
+
+  .right_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  h1 {
+    font-size: 150%;
+    margin-left: 12px;
+  }
+
+  button {
+    width: 60%;
+    height: 50px;
+    align-self: center;
+    margin-right: 16%;
+  }
+
+  .icons {
+    bottom: -120px;
+    right: 38%;
+  }
+}
